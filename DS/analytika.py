@@ -1,28 +1,25 @@
-import codecs
-import nltk 
-from collections import Counter
-
 from nltk.corpus import stopwords
-stop = set(stopwords.words('english'))
-
+from collections import Counter
+#path="sloh.txt"
 path="rocnikovka.txt"
-#path = 'sloh.txt'
-#path = 'algebra.txt'
-#path = "security.txt"
-#sloh_file = codecs.open(path,'r',"utf-8")
-sloh_file = open(path,'r')
-content=sloh_file.read().decode('utf-8','ignore').encode("utf-8")
-print(content)
+file=open(path, "r")
+obsah=file.read().decode("utf-8", "ignore").encode("utf-8")
+#print(obsah)
 
-words=content.split()
-results=[]
+words=obsah.split()
+#print(words)
+
+#stop=set(stopwords.words("english"))
+file2=open("czechStopwords.txt", "r")
+obsah2=file2.read().decode("utf-8", "ignore").encode("utf-8")
+stop=set(obsah2.split())
+#print(stop)
+
+clean=[]
 for word in words:
-     if word not in stop:
-        results.append(word.lower())
-#print(results)        
+  if word.lower() not in stop:
+     clean.append(word.lower())
+print(clean)     
 
-
-cntr = Counter(results)
+cntr = Counter(clean)
 print(cntr.most_common(10))
-
-

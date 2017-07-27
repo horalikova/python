@@ -5,8 +5,9 @@ from collections import Counter
 from nltk.corpus import stopwords
 stop = set(stopwords.words('english'))
 
+path="rocnikovka.txt"
 #path = 'sloh.txt'
-path = 'algebra.txt'
+#path = 'algebra.txt'
 #path = "security.txt"
 #sloh_file = codecs.open(path,'r',"utf-8")
 sloh_file = open(path,'r')

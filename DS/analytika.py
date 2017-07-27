@@ -6,9 +6,11 @@ from nltk.corpus import stopwords
 stop = set(stopwords.words('english'))
 
 #path = 'sloh.txt'
-path = "security.txt"
-sloh_file = codecs.open(path,'r',"utf-8")
-content=sloh_file.read()
+path = 'algebra.txt'
+#path = "security.txt"
+#sloh_file = codecs.open(path,'r',"utf-8")
+sloh_file = open(path,'r')
+content=sloh_file.read().decode('utf-8','ignore').encode("utf-8")
 print(content)
 
 words=content.split()

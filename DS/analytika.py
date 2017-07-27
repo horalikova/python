@@ -5,7 +5,7 @@ from collections import Counter
 from nltk.corpus import stopwords
 stop = set(stopwords.words('english'))
 
-#path = 'C:\Users\evca\Desktop\DS\sloh.txt'
+#path = 'sloh.txt'
 path = "security.txt"
 sloh_file = codecs.open(path,'r',"utf-8")
 content=sloh_file.read()
@@ -15,8 +15,8 @@ words=content.split()
 results=[]
 for word in words:
      if word not in stop:
-        results.append(word)
-print(results)        
+        results.append(word.lower())
+#print(results)        
 
 
 cntr = Counter(results)

@@ -6,7 +6,7 @@ from nltk.corpus import stopwords
 stop = set(stopwords.words('english'))
 
 #path = 'C:\Users\evca\Desktop\DS\sloh.txt'
-path = "algebra.txt"
+path = "security.txt"
 sloh_file = codecs.open(path,'r',"utf-8")
 content=sloh_file.read()
 print(content)

@@ -1,6 +1,13 @@
 from nltk.corpus import stopwords
 from collections import Counter
-path="sloh.txt"
+import sys
+
+
+'Argument List:', str(sys.argv)
+path=str(sys.argv[1])
+print(sys.argv[1])
+
+#path="sloh.txt"
 #path="rocnikovka.txt"
 file=open(path, "r")
 obsah=file.read().decode("utf-8", "ignore").encode("utf-8")

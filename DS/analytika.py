@@ -1,6 +1,7 @@
 from nltk.corpus import stopwords
 from collections import Counter
 import sys
+import pprint
 
 
 'Argument List:', str(sys.argv)
@@ -35,4 +36,9 @@ for word in words:
 print(clean)     
 
 cntr = Counter(clean)
-print(cntr.most_common(10))
+mostCommon=cntr.most_common(10)
+
+#for most in mostCommon:
+#	println (most)
+
+pprint.pprint(mostCommon)

@@ -18,6 +18,6 @@ COUNT=int(sys.argv[1])
 
 statuses = api.GetUserTimeline(screen_name=user2, count=COUNT)
 for s in statuses:
-    print s.text
+    print(s.text)
 
-print 'Staženo {} tweetů'.format(len(statuses))
+print('Staženo {} tweetů'.format(len(statuses)))

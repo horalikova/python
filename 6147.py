@@ -1,4 +1,4 @@
-n = "2609"
+n = str(input("Type a four digit number: (please do not include with same numbers, like 2222 etc.)"))
 n1 = list(map(int,str(n)))
 list.sort(n1)
 num1 = int(''.join(map(str,n1)))

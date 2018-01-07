@@ -2,6 +2,7 @@ from nltk.corpus import stopwords
 from collections import Counter
 import sys
 import pprint
+import csv
 
 
 'Argument List:', str(sys.argv)
@@ -42,3 +43,7 @@ mostCommon=cntr.most_common(10)
 #	println (most)
 
 pprint.pprint(mostCommon)
+
+with open('top.csv', 'w') as output:
+    writer = csv.writer(output, delimiter=',')
+    writer.writerows(mostCommon)    
